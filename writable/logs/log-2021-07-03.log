@@ -1,0 +1,27 @@
+CRITICAL - 2021-07-03 10:49:12 --> Use of undefined constant base_url - assumed 'base_url' (this will throw an Error in a future version of PHP)
+#0 C:\xampp\htdocs\belajar\app\Views\home.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\belajar\system\View\View.php(230): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\belajar\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\belajar\system\Common.php(1271): CodeIgniter\View\View->render('home', Array, true)
+#4 C:\xampp\htdocs\belajar\app\Controllers\Home.php(9): view('home')
+#5 C:\xampp\htdocs\belajar\system\CodeIgniter.php(928): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\belajar\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\belajar\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\belajar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\belajar\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2021-07-03 11:59:19 --> Column 'id' in field list is ambiguous
+CRITICAL - 2021-07-03 11:59:19 --> Column 'id' in field list is ambiguous
+#0 C:\xampp\htdocs\belajar\system\Database\MySQLi\Connection.php(329): mysqli->query('SELECT `id`\nFRO...')
+#1 C:\xampp\htdocs\belajar\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`\nFRO...')
+#2 C:\xampp\htdocs\belajar\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`\nFRO...')
+#3 C:\xampp\htdocs\belajar\system\Database\BaseBuilder.php(1881): CodeIgniter\Database\BaseConnection->query('SELECT `id`\nFRO...', Array, false)
+#4 C:\xampp\htdocs\belajar\system\Model.php(800): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\belajar\app\Models\Mahasiswa_model.php(22): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\belajar\app\Controllers\Home.php(19): App\Models\Mahasiswa_model->getMhs()
+#7 C:\xampp\htdocs\belajar\system\CodeIgniter.php(928): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\belajar\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\belajar\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\belajar\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\belajar\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#12 {main}
