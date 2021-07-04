@@ -16,8 +16,16 @@ class Home extends BaseController
 	public function index()
 	{
 		$data = [
-			'tampilmhs' => $this->db_mhs->getMhs(),
+			'title' => 'Home',
 		];
-		return view('home', $data);
+		return view('v_home', $data);
+	}
+
+	public function about()
+	{
+		$data = [
+			'title' => 'About',
+		];
+		return view('v_about', $data);
 	}
 }
