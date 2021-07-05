@@ -5,10 +5,15 @@
     <div class="col-6">
         <form action="/mahasiswa/simpan" method="post" role="form" enctype="multipart/form-data">
             <div class="mb-3">
-                <label for="nim" class="form-label">NIM</label>
-                <input type="text" id="nim" class="form-control <?= ($validation->hasError('nim')) ? 'is-invalid' : ''; ?>">
+                <label for="jurusan" class="form-label">Jurusan</label>
+                <select class="form-control <?= ($validation->hasError('jurusan')) ? 'is-invalid' : ''; ?>" aria-label="Default select example">
+                    <option value="" selected>Pilih...</option>
+                    <?php foreach ($getjurusan as $j) : ?>
+                        <option value="<?= $j->kd_jurusan; ?>"><?= $j->nama_jurusan; ?></option>
+                    <?php endforeach; ?>
+                </select>
                 <div class="invalid-feedback">
-                    <?= $validation->getError('nim'); ?>
+                    <?= $validation->getError('jurusan'); ?>
                 </div>
             </div>
             <div class="mb-3">
@@ -16,6 +21,13 @@
                 <input type="text" class="form-control <?= ($validation->hasError('nama')) ? 'is-invalid' : ''; ?>" id="nama">
                 <div class="invalid-feedback">
                     <?= $validation->getError('nama'); ?>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="nim" class="form-label">NIM</label>
+                <input type="text" id="nim" class="form-control <?= ($validation->hasError('nim')) ? 'is-invalid' : ''; ?>">
+                <div class="invalid-feedback">
+                    <?= $validation->getError('nim'); ?>
                 </div>
             </div>
             <div class="mb-3">
@@ -36,18 +48,7 @@
                     <?= $validation->getError('jk'); ?>
                 </div>
             </div>
-            <div class="mb-3">
-                <label for="jurusan" class="form-label">Jurusan</label>
-                <select class="form-control <?= ($validation->hasError('jurusan')) ? 'is-invalid' : ''; ?>" aria-label="Default select example">
-                    <option value="" selected>Pilih...</option>
-                    <?php foreach ($getjurusan as $j) : ?>
-                        <option value="<?= $j->kd_jurusan; ?>"><?= $j->nama_jurusan; ?></option>
-                    <?php endforeach; ?>
-                </select>
-                <div class="invalid-feedback">
-                    <?= $validation->getError('jurusan'); ?>
-                </div>
-            </div>
+            
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
