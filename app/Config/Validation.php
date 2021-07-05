@@ -44,7 +44,7 @@ class Validation
 		'nim'				=> 'required|is_unique[tb_mahasiswa.nim]',
 		'nama'				=> 'required',
 		'jk'		    	=> 'required',
-		'jurusan'		=> 'required',
+		'jurusan'			=> 'required',
 	];
 
 	public $mhs_tambah_errors = [

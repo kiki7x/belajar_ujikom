@@ -1,8 +1,8 @@
 <?= $this->extend('templates/layout'); ?>
 
 <?= $this->section('content'); ?>
-<h1 class="visually-hidden">Heroes examples</h1>
 
+<h1 class="visually-hidden">Heroes examples</h1>
 <div class="px-4 py-5 my-5 text-center">
 	<img class="d-block mx-auto mb-4" src="<?= base_url(); ?>/icon/bootstrap-logo.svg" alt="" width="72" height="57">
 	<h1 class="display-5 fw-bold">Centered hero</h1>
@@ -14,6 +14,5 @@
 		</div>
 	</div>
 </div>
-
 
 <?= $this->endSection(); ?>

@@ -16,24 +16,14 @@ class Jurusan_model extends Model
     public function tampilJrs($id = false)
     {
         if ($id == false) {
-            return $this->table('tb_jurusan')
-                ->select('*')
-                ->get()
-                ->getResultArray();
+            return $this->findAll();
         } else {
-            return $this->table('tb_jurusan')
-                ->select('*')
-                ->where('kd_jurusan', $id)
-                ->get()
-                ->getRowArray();
+            return $this->where(['kd_jurusan' => $id])->first();
         }
     }
 
     public function getJrs()
     {
-        return $this->table('tb_jurusan')
-            ->select('*')
-            ->get()
-            ->getResult();
+        return $this->findAll();
     }
 }

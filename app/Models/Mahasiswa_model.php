@@ -16,16 +16,14 @@ class Mahasiswa_model extends Model
     public function getMhs($id = false)
     {
         if ($id === false) {
-            return $this->table('tb_mahasiswa')
-                ->select('*')
-                ->join('tb_jurusan', 'tb_jurusan.kd_jurusan = jurusan', 'INNER JOIN')
-                ->get()->getResultArray();
+            return $this
+                ->join('tb_jurusan', 'tb_jurusan.kd_jurusan = jurusan', 'LEFT')
+                ->findAll();
         } else {
-            return $this->table('tb_mahasiswa')
-                ->select('*')
+            return $this
                 ->join('tb_jurusan', 'tb_jurusan.kd_jurusan = jurusan', 'INNER JOIN')
-                ->where('nim', $id)
-                ->get()->getRowArray();
+                ->where(['nim' => $id])
+                ->first();
         }
     }
 }

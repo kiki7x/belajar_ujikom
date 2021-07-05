@@ -16,6 +16,7 @@ class Mahasiswa extends BaseController
         $this->db_mhs = new Mahasiswa_model();
         $this->db_jrs = new Jurusan_model();
     }
+
     public function index()
     {
         $data = [
@@ -44,7 +45,7 @@ class Mahasiswa extends BaseController
             'nim'        => $this->request->getPost('nim'),
             'nama'       => $this->request->getPost('nama'),
             'jk'         => $this->request->getPost('jk'),
-            'jurusan' => $this->request->getPost('jurusan'),
+            'jurusan'    => $this->request->getPost('jurusan'),
         ];
         // Lakukan validasi input
         if ($validation->run($data, 'mhs_tambah') == FALSE) {

@@ -41,7 +41,7 @@
                 <select name="jurusan" class="form-control <?= ($validation->hasError('jurusan')) ? 'is-invalid' : ''; ?>" aria-label="Default select example">
                     <option value="" selected>Pilih...</option>
                     <?php foreach ($getjurusan as $j) : ?>
-                        <option value="<?= $j->kd_jurusan; ?>"><?= $j->nama_jurusan; ?></option>
+                        <option value="<?= $j['kd_jurusan']; ?>"><?= $j['nama_jurusan']; ?></option>
                     <?php endforeach; ?>
                 </select>
                 <div class="invalid-feedback">
