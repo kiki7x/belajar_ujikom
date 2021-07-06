@@ -31,7 +31,7 @@ class Mahasiswa extends BaseController
         $data = [
             'title' => 'Tambah Mahasiswa',
             'validation' => \Config\Services::validation(),
-            'getjurusan' => $this->db_jrs->getJrs(),
+            'apahayoo' => $this->db_jrs->getJrs(),
         ];
         return view('v_tambah', $data);
     }
